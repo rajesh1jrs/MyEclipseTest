@@ -6,5 +6,8 @@ public with sharing class newAccountInsert {
     	ac.name=name;
     	ac.industry=industry;
     	insert ac;
+    	contact con = new contact();
+    	con.department=ac.industry();
+    	update con;
     }
 }
